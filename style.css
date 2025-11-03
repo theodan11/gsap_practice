@@ -7,7 +7,7 @@
 
 body{
     background-color: #020013;
-    color: white;
+    color: rgb(233, 233, 233);
 }
 
 #section1{
@@ -39,7 +39,7 @@ body{
             width: 200px;
             height: 200px;
             background-color: rgb(13, 13, 61);
-            border: 1px solid rgb(194, 194, 194);
+            border: 1px solid rgb(95, 94, 94);
             border-radius: 12px;
             cursor: pointer;
             transition: all .3s ease;
@@ -48,7 +48,7 @@ body{
             }
 
             p{
-
+ color: rgb(168, 168, 168);
             }
             &:hover{
                 background-color: rgb(33, 33, 83);

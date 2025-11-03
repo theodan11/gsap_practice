@@ -35,6 +35,10 @@ body {
                 text-align: center;
             }
 
+            p {
+                color: rgb(168, 168, 168);
+            }
+
             .playground {
                 position: relative;
                 display: flex;
@@ -56,6 +60,7 @@ body {
                     cursor: pointer;
                     transition: background-color .3s ease;
                     border-radius: 4px;
+
                     &:hover {
                         background-color: #372f83c9;
                     }

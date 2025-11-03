@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>03</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="backBtn" href="/index.html">back</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>GSAP Methods</h1>
+            <p>
+                We can animate with css properties yay!...
+                But css properties must be used in camelCase and for using special characters wrapping in quotation is needed.
+            <pre class="language-js">
+                    <code>
+const playBtn = document.querySelector(".playBtn")
+const pauseBtn = document.querySelector(".pauseBtn")
+const ResumeBtn = document.querySelector(".ResumeBtn")
+const ReverseBtn = document.querySelector(".ReverseBtn")
+const restartBtn = document.querySelector(".restartBtn")
+const killBtn = document.querySelector(".killBtn")
+const yoyoBtn = document.querySelector(".yoyoBtn")
+
+const repeatBtn = document.querySelector(".repeatBtn")
+
+const  box1Animation = gsap.to(".box1", {
+    opacity: 1,
+    scale: 1,
+    duration: 2,
+    y: 100,
+    x: 300,
+    borderRadius: "100%",
+    backgroundColor: "#4657bbff",
+    yoyo: true,
+    repeat: -1,
+    ease: "bounce.out"
+})
+
+playBtn.addEventListener("click", ()=>{
+    box1Animation.play()
+})
+pauseBtn.addEventListener("click", ()=>{
+    box1Animation.pause()
+})
+ResumeBtn.addEventListener("click", ()=>{
+box1Animation.resume()
+})
+ReverseBtn.addEventListener("click", ()=>{
+box1Animation.reverse()
+})
+restartBtn.addEventListener("click", ()=>{
+box1Animation.restart()
+})
+killBtn.addEventListener("click", ()=>{
+box1Animation.kill()
+})
+yoyoBtn.addEventListener("click", ()=>{
+box1Animation.yoyo(true)
+})
+
+
+repeatBtn.addEventListener("click",()=>{
+    box1Animation.repeat(1)
+})
+
+reloadBtn.addEventListener("click", () => {
+    box1Animation.restart()
+})</code>
+                </pre>
+            </p>
+            <div class="playground">
+                <button id="reloadBtn">Reload</button>
+                <div class="controls">
+                    <button class="playBtn btn">Play</button>
+                    <button class="pauseBtn btn">Pause</button>
+                    <button class="ResumeBtn btn">Resume</button>
+                    <button class="ReverseBtn btn">Reverse</button>
+                    <button class="restartBtn btn">Restart</button>
+                    <button class="killBtn btn">Kill</button>
+                    <button class="yoyoBtn btn">Yoyo</button>
+                    <button class="repeatBtn btn">Repeat</button>
+                </div>
+                <div class="box box1">
+                    Box 1
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
