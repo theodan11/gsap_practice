@@ -1,0 +1,62 @@
+body {
+    background-color: #020013;
+    color: white;
+
+    header {
+        nav {
+            padding: 30px 0 20px 100px;
+
+            .backBtn {
+                text-decoration: inherit;
+                color: white;
+                border-radius: 4px;
+                display: inline;
+                cursor: pointer;
+                padding: 12px 20px;
+
+                background-color: #382f836c;
+
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #372f83c9;
+                }
+            }
+        }
+    }
+
+    main {
+        section {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+
+            h1 {
+                text-align: center;
+            }
+
+            .playground {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 30px;
+                background-color: #0b0920;
+                min-height: 60vh;
+                border-radius: 8px;
+
+                .box1{
+                    opacity: 0;
+                    transform: scale(0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 250px;
+                    height: 250px;
+                    background-color: #1e1b3b;
+                }
+            }
+
+        }
+    }
+
+}
