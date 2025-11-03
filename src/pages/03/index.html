@@ -31,7 +31,6 @@ const ReverseBtn = document.querySelector(".ReverseBtn")
 const restartBtn = document.querySelector(".restartBtn")
 const killBtn = document.querySelector(".killBtn")
 const yoyoBtn = document.querySelector(".yoyoBtn")
-
 const repeatBtn = document.querySelector(".repeatBtn")
 
 const  box1Animation = gsap.to(".box1", {
@@ -68,12 +67,9 @@ box1Animation.kill()
 yoyoBtn.addEventListener("click", ()=>{
 box1Animation.yoyo(true)
 })
-
-
 repeatBtn.addEventListener("click",()=>{
     box1Animation.repeat(1)
 })
-
 reloadBtn.addEventListener("click", () => {
     box1Animation.restart()
 })</code>

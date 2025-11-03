@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>03</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="backBtn" href="/index.html">back</a>
+        </nav>
+    </header>
+    <main>
+            <button class="upBtn">Up</button>
+        <section>
+            <h1>GSAP Methods</h1>
+            <p>
+                We can animate with css properties yay!...
+                But css properties must be used in camelCase and for using special characters wrapping in quotation is needed.
+            <pre class="language-js">
+                    <code>
+const playBtn = document.querySelector(".playBtn")
+const pauseBtn = document.querySelector(".pauseBtn")
+const ResumeBtn = document.querySelector(".ResumeBtn")
+const ReverseBtn = document.querySelector(".ReverseBtn")
+const restartBtn = document.querySelector(".restartBtn")
+const killBtn = document.querySelector(".killBtn")
+const yoyoBtn = document.querySelector(".yoyoBtn")
+const repeatBtn = document.querySelector(".repeatBtn")
+
+const  box1Animation = gsap.to(".box1", {
+    opacity: 1,
+    scale: 1,
+    duration: 2,
+    y: 100,
+    x: 300,
+    borderRadius: "100%",
+    backgroundColor: "#4657bbff",
+    yoyo: true,
+    repeat: -1,
+    ease: "bounce.out"
+})
+
+playBtn.addEventListener("click", ()=>{
+    box1Animation.play()
+})
+pauseBtn.addEventListener("click", ()=>{
+    box1Animation.pause()
+})
+ResumeBtn.addEventListener("click", ()=>{
+box1Animation.resume()
+})
+ReverseBtn.addEventListener("click", ()=>{
+box1Animation.reverse()
+})
+restartBtn.addEventListener("click", ()=>{
+box1Animation.restart()
+})
+killBtn.addEventListener("click", ()=>{
+box1Animation.kill()
+})
+yoyoBtn.addEventListener("click", ()=>{
+box1Animation.yoyo(true)
+})
+repeatBtn.addEventListener("click",()=>{
+    box1Animation.repeat(1)
+})
+reloadBtn.addEventListener("click", () => {
+    box1Animation.restart()
+})</code>
+                </pre>
+            </p>
+            <div class="playground">
+            
+   
+                <div class="text-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusantium quos nam veritatis, optio voluptates! Qui distinctio, a dolor quae ipsam harum? Blanditiis fugiat ad nihil quos, reprehenderit quibusdam natus nesciunt, optio quasi, dolorem mollitia ipsum consectetur saepe iure illum illo dignissimos delectus voluptate iste expedita eligendi sequi porro id! Vitae non blanditiis assumenda, maiores, quasi voluptates dolore minima atque inventore ipsa praesentium sequi velit ea natus iure totam eius? Incidunt ut architecto iusto ullam voluptatibus, ea repellat veritatis ratione quidem commodi facilis optio laudantium voluptatum quisquam, libero sunt illum. Libero error voluptates accusantium vitae repellendus nisi nihil explicabo natus, corrupti porro ducimus quasi eum dolorem eaque non aut impedit omnis reiciendis. Quam id ea obcaecati eveniet voluptatem minima tenetur facere odio ipsam reiciendis? Molestias molestiae magnam ab unde recusandae. Distinctio, cumque nesciunt voluptates commodi earum corporis quisquam consequuntur atque impedit, aperiam autem cum est at veritatis? Vel beatae molestiae voluptatum sed architecto explicabo illo vero! Modi animi cumque vitae, commodi nobis eveniet maiores possimus quaerat pariatur fuga error dolorem odio eius blanditiis inventore officia doloribus magnam facere laboriosam velit excepturi quos amet! Itaque tempore omnis laboriosam eum fugit tempora adipisci iusto odit nostrum. Odit, harum eius quae sit quaerat fugiat maiores ad possimus ut maxime nesciunt nulla, ex sapiente magnam sunt ab totam! Consequuntur similique aperiam libero. Et, quidem aliquam quasi odit aut saepe quae in neque tempora nihil ad. Corporis similique cumque deserunt tempore temporibus autem odio labore voluptatum ab, fugiat illo sapiente excepturi natus doloribus, incidunt, ratione optio reiciendis aspernatur laudantium! Necessitatibus voluptatum deserunt ipsa, maiores exercitationem eos voluptates laboriosam ipsum perferendis nostrum. Reiciendis facere velit, quis culpa harum, sequi tempore modi ratione expedita error rerum, neque nostrum mollitia quidem porro ipsum distinctio animi saepe. Maiores aperiam, voluptatum tempore aliquid iure minus laboriosam doloribus dolorum recusandae iusto reiciendis eveniet explicabo aspernatur? Et molestiae, mollitia quaerat, iusto deserunt autem sapiente earum sed repellat voluptates cum magnam iste distinctio ea a quia voluptatem assumenda maxime necessitatibus libero officia fugit impedit itaque? Laudantium at doloribus vero magni hic, odio veniam, dolorem exercitationem laboriosam fuga nesciunt repellendus accusamus maxime quae. Doloremque, nemo? Eos voluptatem blanditiis doloremque nesciunt, repellendus molestias voluptate, eligendi quibusdam similique recusandae ullam! Illo exercitationem consectetur libero ipsum obcaecati maiores, dolorem nihil porro qui nemo voluptatum nobis esse accusamus error quae minima ducimus enim natus in, alias dolor, culpa deleniti molestias debitis. Perferendis quae consequatur perspiciatis voluptates laborum hic facilis, nihil vel non nostrum sunt. Hic, a alias! Reiciendis et omnis dicta corrupti placeat ad nostrum architecto adipisci expedita illum quis consequatur id repellat quam possimus, quasi nesciunt quos eligendi dolorum? Illum quasi, fugit impedit, laboriosam cumque nulla sed quidem sunt ea, numquam debitis consectetur voluptatem quam cupiditate accusantium expedita deserunt ut error minima eos. Quam tempore, rem ipsum enim consequuntur libero laborum, ex exercitationem iure nobis quis itaque, corrupti alias at explicabo corporis debitis natus iste hic. Ratione pariatur atque itaque! Consectetur porro eius, deserunt amet, nulla ab laborum sequi vero repellendus possimus soluta! Asperiores veniam perspiciatis et ullam explicabo error itaque maiores illo iste quos, adipisci impedit. Ab eveniet blanditiis nemo placeat? Doloribus ab vitae blanditiis saepe quasi nemo, veniam deleniti optio tempore tempora at fuga odit perspiciatis officiis distinctio! Sequi illo error, modi architecto repellendus eligendi dolor. Facere, pariatur doloremque officiis aut magni consequuntur velit illum necessitatibus dignissimos mollitia neque delectus maiores, assumenda culpa totam ipsam ad? Odit, necessitatibus fugiat deserunt est aut id eligendi, blanditiis, iusto dignissimos aliquid quisquam. Suscipit, quam eos blanditiis doloribus corporis delectus. Dolorem harum delectus, tenetur maiores deleniti officiis quia repellendus. Sit voluptatum numquam quasi? Reiciendis illo, quae possimus quis soluta doloribus nostrum facilis. Velit earum officia animi fugit voluptate cumque ad quia dicta aperiam unde harum quam rerum ex tempore, fugiat magnam atque expedita quibusdam? Fugit ut saepe adipisci explicabo ipsum nemo a aliquid exercitationem sunt quidem fugiat nobis tempore vel repellat assumenda odio blanditiis rem soluta, dolore impedit doloremque libero sed. Dolorum minima quaerat asperiores expedita pariatur, aspernatur voluptatem impedit voluptatum recusandae sed cupiditate consectetur. Recusandae atque voluptatibus sit rerum ab et enim quae maxime placeat, excepturi, quos illo, saepe quia? Architecto qui necessitatibus beatae, molestiae sunt sequi, sed voluptas explicabo nam corporis ipsa corrupti? Sunt, sed nisi voluptates consequuntur in, laboriosam aspernatur distinctio facilis saepe exercitationem commodi officia totam. Dolores hic, dolor tempore officia fugiat at in. Sit numquam voluptate eveniet incidunt eligendi? Id facilis laboriosam minus labore! Officia et aut fuga id tempora nulla provident dicta explicabo perspiciatis modi voluptatibus, veritatis commodi voluptates error consequuntur repudiandae omnis non esse sed voluptas saepe, labore tenetur. Dignissimos aliquam temporibus a eos, culpa modi praesentium libero, sint explicabo reiciendis distinctio quod aliquid dicta iste? Ut deleniti temporibus quam illum similique exercitationem, suscipit commodi maiores repellat autem atque optio provident. Odio repudiandae magnam sequi maiores? Velit rerum eum laudantium dolores? Iure.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae soluta nemo sunt atque nulla quidem rem, quae eius itaque labore eaque amet voluptates odit sit sequi quod maiores ut debitis placeat eos porro saepe dolores consectetur! Ducimus error fuga voluptatem corporis nemo ipsum temporibus fugit. Nesciunt animi eos nostrum, aliquid voluptatem amet alias exercitationem at mollitia? Excepturi earum molestiae quo ipsam est fugiat recusandae facilis tenetur corporis quasi quae, repudiandae architecto maiores cum voluptatum sed, fuga alias culpa. Placeat rerum sapiente quibusdam neque. Ullam adipisci facere tenetur maxime voluptatum consectetur voluptatibus officia? Tempora deserunt consectetur ducimus ipsa. Vero tempore fugiat quos quo soluta atque iusto corrupti officiis quisquam. Laudantium alias accusamus quis, magnam asperiores impedit ipsum, illum molestias temporibus obcaecati in architecto, nam porro facilis tempora recusandae? Labore quo similique tempora! Amet, corporis quam qui voluptates dolor totam molestias eius? Quod nesciunt quam harum voluptatibus! Fugit odio distinctio veniam eaque? Aperiam at perferendis eum fugiat aliquid mollitia vitae maiores! Molestiae quae minus quibusdam atque sint delectus culpa facere quam corrupti cum tenetur, recusandae qui quidem. Deleniti facere quod reiciendis harum impedit, nemo animi nobis quam reprehenderit dolorum officia quibusdam accusamus accusantium debitis. Quasi est molestias voluptatibus vel ab illo eius unde, eveniet dolorem sed amet quas quia earum consequatur. Recusandae cupiditate odit nostrum sunt ex voluptatibus accusantium quisquam repudiandae labore nobis quae quos alias amet nulla ullam perferendis doloremque impedit eius, molestias consequatur dicta blanditiis eligendi reiciendis! Odio illo ducimus vero assumenda placeat fugit odit ut esse enim asperiores eos, rerum perferendis mollitia ipsum voluptas explicabo autem harum tempore dolore nostrum quia tempora dolor? Amet aliquam non placeat iste quidem tenetur inventore aperiam dolore recusandae ipsum ad debitis alias iure nostrum quisquam voluptatibus repellendus reiciendis repellat dolor quasi, praesentium quaerat eaque nisi! Error ex odio tempore, dolorum ea nisi perferendis quos suscipit autem harum pariatur sapiente perspiciatis enim commodi facilis fugit placeat. Doloribus deserunt pariatur fugit reiciendis officia rem asperiores libero sed, natus eos tempora magni fuga soluta temporibus quae, ut accusantium molestias provident tempore quasi repellat excepturi. Vel dolor nostrum corrupti? Eaque perferendis iusto iste nisi. Esse officia id recusandae, aperiam consequuntur cupiditate necessitatibus modi molestias commodi tempora facere temporibus eum quidem ea. Eveniet laudantium, soluta in maxime voluptatem fuga nihil. Voluptatum earum recusandae, unde necessitatibus maiores eveniet debitis tempore atque reprehenderit exercitationem. Quia eaque illum optio ipsum deserunt? Minima quaerat amet distinctio rem architecto aliquam quibusdam, quasi dolore!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sed nesciunt enim placeat laboriosam aspernatur facilis ratione nobis voluptatem amet odit quam modi tempora libero ducimus pariatur nulla veniam, necessitatibus illo, beatae fugit. Quis voluptate tempore dolorem doloribus nobis fugiat quasi laborum ipsa, doloremque necessitatibus accusantium magni deserunt nam in earum voluptatum nemo iusto. Eius, earum? Laudantium optio aut perferendis, facilis eum laboriosam magni esse debitis sed non tenetur nesciunt amet, similique, ducimus quisquam. Ipsam nulla, eum et placeat nisi nihil asperiores excepturi distinctio fugit deserunt sequi delectus laborum quam ducimus. Quos earum atque non ipsam repellendus corrupti, eos tenetur quis quaerat sed consequuntur dolorum possimus veritatis fuga assumenda architecto obcaecati laudantium explicabo iure deleniti. Doloremque reiciendis laboriosam dignissimos hic harum quas repudiandae quaerat! Voluptatem animi illum quisquam at repellendus nam magni quam porro? Magnam nostrum quod provident id natus iusto odio laborum facere, corrupti est tempora obcaecati numquam doloremque ipsum neque modi quo nisi quibusdam fugiat laboriosam voluptate! Esse vel libero vero ut ea illo sunt accusantium fugiat aut alias natus eligendi necessitatibus dolorum nihil, velit facere magni? Modi.
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

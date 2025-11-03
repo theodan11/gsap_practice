@@ -1,0 +1,129 @@
+body {
+    background-color: #020013;
+    color: white;
+
+    header {
+        nav {
+            padding: 30px 0 20px 100px;
+
+            .backBtn {
+
+                text-decoration: inherit;
+                color: white;
+                border-radius: 4px;
+                display: inline;
+                cursor: pointer;
+                padding: 12px 20px;
+
+                background-color: #382f836c;
+
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #372f83c9;
+                }
+            }
+        }
+    }
+
+    main {
+        .upBtn {
+            visibility: hidden;
+            position: fixed;
+            bottom: 50px;
+            right: 40px;
+            background-color: #8d83e66c;
+            border: none;
+            color: white;
+            font-weight: bold;
+
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #372f83c9;
+            }
+        }
+
+        .show{
+            visibility: visible;
+        }
+
+        section {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                color: rgb(168, 168, 168);
+            }
+
+
+
+            .playground {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 30px;
+                background-color: #0b0920;
+                min-height: 60vh;
+                border-radius: 8px;
+
+
+                #reloadBtn {
+                    position: absolute;
+                    top: 10px;
+                    background-color: #382f836c;
+                    right: 10px;
+                    border: none;
+                    padding: 12px 20px;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: background-color .3s ease;
+
+                    &:hover {
+                        background-color: #372f83c9;
+                    }
+                }
+
+                .text-content {
+                    line-height: 3;
+
+                }
+
+
+                .box {
+                    border-radius: 6px;
+                    opacity: 0;
+                    transform: scale(0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 250px;
+                    height: 250px;
+
+                }
+
+                .box1 {
+
+                    background-color: #1e1b3b;
+                }
+
+                .box2 {
+                    background-color: #3f9c5b;
+                }
+            }
+
+        }
+    }
+
+}
