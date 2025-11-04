@@ -3,7 +3,7 @@ const upBtn = document.querySelector(".upBtn")
 let isFloating = false
 
 window.addEventListener('scroll',()=>{
-    if( window.scrollY > 100){
+    if( window.scrollY > 500){
         upBtn.classList.add('show')
           if(!isFloating){
             gsap.to(upBtn, {

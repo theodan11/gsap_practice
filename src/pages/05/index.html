@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>03</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="backBtn" href="/index.html">back</a>
+        </nav>
+    </header>
+    <main>
+        <button class="upBtn">Up</button>
+        <section>
+            <h1>GSAP Methods</h1>
+            <p>
+                We can animate with css properties yay!...
+                But css properties must be used in camelCase and for using special characters wrapping in quotation is
+                needed.
+            <pre class="language-js">
+                    <code>
+const tabs = document.querySelectorAll(".tab")
+const tabRows = document.querySelector(".tabRows")
+const indicator = document.querySelector(".indicator")
+
+
+const handleIndicator = (target)=>{
+   const tabBoundingBox = target.getBoundingClientRect();
+   const rowBoundingBox = tabRows.getBoundingClientRect();
+   const tabWidth = tabBoundingBox.width
+   const offset = tabBoundingBox.left - rowBoundingBox.left
+
+   gsap.to(indicator, {
+    x: offset, 
+    duration:0.4,
+    width: tabWidth,
+    ease: "back.out(1.7)"
+   })
+
+}
+tabs.forEach((tab)=>{
+    tab.addEventListener("click", ()=>{
+        handleIndicator(tab)
+        tabs.forEach((t)=>{t.classList.remove("active")})
+        tab.classList.add("active")
+    })
+})
+</code>
+                </pre>
+            </p>
+            <div class="playground">
+                <div class="tabs">
+                    <div class="tabRows">
+                        <div class="tab active">Overview</div>
+                        <div class="tab">Features</div>
+                        <div class="tab">Pricing</div>
+                        <div class="tab">Team</div>
+                        <div class="tab">Support</div>
+
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

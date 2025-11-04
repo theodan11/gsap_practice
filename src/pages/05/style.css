@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -52,7 +52,7 @@ body {
             }
         }
 
-        .show{
+        .show {
             visibility: visible;
         }
 
@@ -82,48 +82,43 @@ body {
                 border-radius: 8px;
 
 
-                #reloadBtn {
-                    position: absolute;
-                    top: 10px;
-                    background-color: #382f836c;
-                    right: 10px;
-                    border: none;
-                    padding: 12px 20px;
-                    color: white;
-                    cursor: pointer;
-                    border-radius: 4px;
-                    transition: background-color .3s ease;
+                .tabs {
+                    background-color: #020013;
+                    padding: 20px 30px;
+                    position: relative;
+                    border-radius: 12px;
 
-                    &:hover {
-                        background-color: #372f83c9;
+                    box-shadow: 0px 0px 12px #141033;
+
+                    .tabRows {
+                        display: flex;
+                        gap: 16px;
+
+                        .tab {
+                            color: rgb(159, 163, 167);
+                            transition: color .3s ease;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: white;
+
+                            }
+                        }
+
+                        .active {
+                            color: white;
+                        }
+
+                        .indicator {
+                            position: absolute;
+                            bottom: 0;
+                            height: 3px;
+                            width: 60px;
+                            border-radius: 8px;
+                            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                            z-index: 10;
+                        }
                     }
-                }
-
-                .text-content {
-                    line-height: 3;
-
-                }
-
-
-                .box {
-                    border-radius: 6px;
-                    opacity: 0;
-                    transform: scale(0);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 250px;
-                    height: 250px;
-
-                }
-
-                .box1 {
-
-                    background-color: #1e1b3b;
-                }
-
-                .box2 {
-                    background-color: #3f9c5b;
                 }
             }
 
