@@ -1,5 +1,3 @@
-
-
 const tabs = document.querySelectorAll(".tab")
 const tabRows = document.querySelector(".tabRows")
 const indicator = document.querySelector(".indicator")
